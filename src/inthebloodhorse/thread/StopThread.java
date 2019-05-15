@@ -14,7 +14,6 @@ public class StopThread {
         });
         thread.start();
         Thread.sleep(1000);
-//        TimeUnit.SECONDS.sleep(1);
         flag = false;
     }
 }

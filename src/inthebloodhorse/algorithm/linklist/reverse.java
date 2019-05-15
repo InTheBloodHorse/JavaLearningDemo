@@ -3,6 +3,11 @@ package inthebloodhorse.algorithm.linklist;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/*
+    输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
+ */
+
+
 public class reverse {
 
     public static ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
@@ -30,8 +35,3 @@ public class reverse {
         System.out.println(reverse.printListFromTailToHead(listNode1));
     }
 }
-/*
-    输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
- */
-
-

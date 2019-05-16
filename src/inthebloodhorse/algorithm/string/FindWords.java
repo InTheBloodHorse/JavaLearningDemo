@@ -21,8 +21,8 @@ import java.util.*;
     输出: ["eat","oath"]
  */
 class TrieNode {
-    public boolean isWord;
     public Map<Integer, TrieNode> children;
+    public boolean isWord;
 
     public TrieNode() {
         children = new HashMap<>();
@@ -85,7 +85,6 @@ public class FindWords {
         if (startsWith(stringBuilder.toString()) == false) return;
         if (search(stringBuilder.toString()) == true) {
             ans.add(stringBuilder.toString());
-            return;
         }
         for (int i = 0; i < 4; i++) {
             int nX = x + dir[i][0];
@@ -112,7 +111,7 @@ public class FindWords {
             m = board[i].length;
             for (int j = 0; j < m; j++) {
                 if (head.get(board[i][j] - 'a') != null) {
-                    vis = new int[n+5][m+5];
+                    vis = new int[n + 5][m + 5];
                     StringBuilder stringBuilder = new StringBuilder();
                     stringBuilder.append(board[i][j]);
                     dfs(board, stringBuilder, i, j, ans);
@@ -126,9 +125,9 @@ public class FindWords {
 
     public static void main(String[] args) {
         char[][] board = new char[][]{
-                {'o', 'a', 'a', 'n'}, {'e', 't', 'a', 'e'}, {'i', 'h', 'k', 'r'}, {'i', 'f', 'l', 'v'}
+                {'a', 'b'}, {'a', 'a'}
         };
-        String[] st = new String[]{"oath", "pea", "eat", "rain"};
+        String[] st = new String[]{"aba", "baa", "bab", "aaab", "aaa", "aaaa", "aaba"};
         System.out.println(new FindWords().findWords(board, st));
     }
 }

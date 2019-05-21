@@ -33,16 +33,3 @@ public class FindKthToTail {
     }
 }
 
-class ListNode {
-    int val;
-    ListNode next = null;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    @Override
-    public String toString() {
-        return Integer.valueOf(val).toString();
-    }
-}

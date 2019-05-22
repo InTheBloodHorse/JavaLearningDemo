@@ -17,7 +17,7 @@ public class FindKthToTail {
             a--;
             sum++;
         }
-        return k<=sum ? pre : null;
+        return k <= sum ? pre : null;
     }
 
     public static void main(String[] args) {

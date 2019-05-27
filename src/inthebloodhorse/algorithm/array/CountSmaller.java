@@ -52,6 +52,6 @@ public class CountSmaller {
     }
 
     public static void main(String[] args) {
-        new CountSmaller().countSmaller(new int[]{5, 2, 6, 1});
+        new CountSmaller().countSmaller(new int[]{0, 0});
     }
 }

@@ -6,15 +6,12 @@ public class Test {
         for (int i = 0; i < 10000000; i++) {
             final int a = i;
             Thread.sleep(10);
-            pool.submit(new Runnable() {
-                @Override
-                public void run() {
-                    System.out.println(String.format("任务进入队列:%d", a));
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+            pool.submit(() -> {
+                System.out.println(String.format("任务进入队列:%d", a));
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             });
         }
